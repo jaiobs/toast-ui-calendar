@@ -1,0 +1,55 @@
+<div class="headerBlock">
+
+  <div class="titleBlock text-align-center">
+    TUI_Calendar
+  </div>
+  
+  <div class="my-3  mx-1 row align-items-center">
+
+    <div class="col-md-2 col-sm-2 col-xs-2 padding-0 mx-1 my-2">
+      <select class="form-select form-select-sm borderOval f-14" aria-label="Default select example" #view
+        (change)="monthView(view.value)">
+        <option value="monthly view">monthly view</option>
+        <option value="daily view">daily view</option>
+        <option value="weekly view">weekly view</option>
+        <option value="2 weeks monthly view">2 weeks monthly view</option>
+        <option value="3 weeks monthly view">3 weeks monthly view</option>
+        <option value="6 weeks monthly view">6 weeks monthly view</option>
+      </select>
+    </div>
+
+    <div class="col-md-3 col-sm-4 col-xs-4 widthFit padding-0 mx-1 my-2">
+      <button type="button" class="btn btn-outline-secondary ml-1 borderOval btnpadding" (click)="today()">today</button>
+      <button type="button" class="btn btn-outline-secondary mx-1 borderCircle btnpadding" (click)="previous()">&lt;</button>
+      <button type="button" class="btn btn-outline-secondary ml-1 borderCircle btnpadding" (click)="next()">&gt;</button>
+    </div>
+
+    <div class="col-md-2 f-14 col-sm-2 col-xs-2 padding-0 mx-1 my-2">
+      <select class="form-select form-select-sm borderOval" aria-label="Default select example" #view1
+        (change)="weekView(view1.value)">
+        <option value="narrow weekend">narrow weekend</option>
+        <option value="start monday">start day of monday</option>
+        <option value="work week">work week</option>
+      </select>
+    </div>
+
+    <div class="col-md-2 f-14 col-sm-2 col-xs-2 padding-0 mx-1 my-2">
+      <select class="form-select form-select-sm borderOval" aria-label="Default select example" #view2
+        (change)="calendarView(view2.value)" [(ngModel)]="bindValue">
+        <option value="All">All</option>
+        <option value="1">My Calendar</option>
+        <option value="2">Company</option>
+        <option value="3">Family</option>
+        <option value="4">Friend</option>
+        <option value="5">Birthday</option>
+        <option value="6">National Holidays</option>
+      </select>
+    </div>
+
+    <div class="col-md-3 f-14 col-sm-2 col-xs-2 padding-0 mx-1 my-2">
+      <b>{{renderDate}}</b>
+    </div>
+
+  </div>
+  <div id="calendar"></div>
+</div>

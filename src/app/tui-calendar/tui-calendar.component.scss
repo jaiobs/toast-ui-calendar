@@ -1,0 +1,57 @@
+.headerBlock {
+  margin: 15px;
+}
+.titleBlock {
+  text-align: center;
+  color: blue;
+  font-size: 20px;
+  font-weight: bold;
+}
+.borderOval {
+  border-radius: 50px;
+}
+
+.borderCircle {
+  font-size: 20px;
+  padding: 0px 12px !important;
+  border-radius: 50%;
+}
+
+.widthFit {
+  width: fit-content;
+}
+
+.btn {
+  border: 1px solid #ced4da !important;
+  outline: none !important;
+}
+
+.btn:focus {
+  outline: 0px !important;
+  box-shadow: none !important;
+}
+
+select:focus {
+  outline: 0px !important;
+  box-shadow: none !important;
+}
+
+.f-14 {
+  font-size: 14px;
+}
+
+// .row > * {
+//   padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+// }
+
+.padding-0 {
+  padding: 0px !important;
+}
+
+select{
+  text-overflow: ellipsis
+}
+
+.btnpadding{
+  padding: 2px 20px;
+}
